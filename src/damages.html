@@ -308,46 +308,5 @@
         </div>
       </div>
     </footer>
-
-    <script>
-      const tabs = document.querySelector('.js-tabs');
-      const singleTabs = document.querySelectorAll('.js-tab');
-      const panels = document.querySelectorAll('.js-panel');
-
-      tabs.addEventListener('click', e => {
-        if (e.target.tagName === 'LI') {
-          const targetPanel = document.querySelector(e.target.dataset.info);
-          panels.forEach(panel => {
-            if (panel === targetPanel) {
-              // DO ZOPTYMALIZAOWANIA
-              panel.classList.add('js-active');
-              singleTabs.forEach(tab => tab.classList.remove('js-active'));
-              document
-                .querySelector(`[data-info="${e.target.dataset.info}"]`)
-                .classList.add('js-active');
-            } else {
-              panel.classList.remove('js-active');
-            }
-          });
-        }
-      });
-    </script>
-    <script>
-      const hamburgerIcon = document.getElementById('hamburger-icon');
-      const hamburgerBackdrop = document.getElementById('hamburger-backdrop');
-      const hamburgerMenu = document.getElementById('hamburger-menu');
-
-      hamburgerIcon.addEventListener('click', () => {
-        hamburgerIcon.classList.toggle('js-active');
-        hamburgerBackdrop.classList.toggle('js-active');
-        hamburgerMenu.classList.toggle('js-active');
-      });
-
-      hamburgerBackdrop.addEventListener('click', () => {
-        hamburgerIcon.classList.remove('js-active');
-        hamburgerBackdrop.classList.remove('js-active');
-        hamburgerMenu.classList.remove('js-active');
-      });
-    </script>
   </body>
 </html>
