@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Jan Pabian - Centrum szkód</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header header--inner">
+      <div class="header__backdrop">
+        <div class="container">
+          <nav class="header__nav">
+            <div class="header__nav-logo">
+              <a href="index.html"
+                ><img
+                  src="img/logo.png"
+                  alt="Logo zakładu"
+                  class="header__nav-logo-image"
+              /></a>
+            </div>
+            <ul class="header__nav-items">
+              <li class="header__nav-item">
+                <a href="index.html" class="header__nav-item-link"
+                  >Strona Główna</a
+                >
+              </li>
+              <li class="header__nav-item">
+                <a href="about.html" class="header__nav-item-link">O nas</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="gallery.html" class="header__nav-item-link">Galeria</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="contact.html" class="header__nav-item-link">Kontakt</a>
+              </li>
+            </ul>
+            <div class="header__nav-hamburger">
+              <div class="header__nav-hamburger-icon" id="hamburger-icon">
+                <span
+                  class="header__nav-hamburger-icon-line header__nav-hamburger-icon-line--first"
+                ></span>
+                <span
+                  class="header__nav-hamburger-icon-line header__nav-hamburger-icon-line--second"
+                ></span>
+                <span
+                  class="header__nav-hamburger-icon-line header__nav-hamburger-icon-line--third"
+                ></span>
+              </div>
+              <div
+                class="header__nav-hamburger-backdrop"
+                id="hamburger-backdrop"
+              ></div>
+              <div class="header__nav-hamburger-menu" id="hamburger-menu">
+                <ul class="header__nav-hamburger-menu-items">
+                  <li class="header__nav-hamburger-menu-item">
+                    <a
+                      href="index.html"
+                      class="header__nav-hamburger-menu-item-link"
+                      >Strona Główna</a
+                    >
+                  </li>
+                  <li class="header__nav-hamburger-menu-item">
+                    <a
+                      href="about.html"
+                      class="header__nav-hamburger-menu-item-link"
+                      >O nas</a
+                    >
+                  </li>
+                  <li class="header__nav-hamburger-menu-item">
+                    <a
+                      href="gallery.html"
+                      class="header__nav-hamburger-menu-item-link"
+                      >Galeria</a
+                    >
+                  </li>
+                  <li class="header__nav-hamburger-menu-item">
+                    <a
+                      href="contact.html"
+                      class="header__nav-hamburger-menu-item-link"
+                      >Kontakt</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Section A -  -->
+    <section class="damages-a text-center py-4">
+      <div class="container">
+        <h2 class="section-title">Centrum Obsługi Szkód Komunikacyjnych</h2>
+        <div class="bottom-line"></div>
+
+        <div class="damages-a__content">
+          <!-- Tabs -->
+          <ul class="damages-a__tabs js-tabs">
+            <li data-info="#about" class="damages-a__tab js-tab js-active">
+              O nas
+            </li>
+            <li data-info="#damagesDepartment" class="damages-a__tab js-tab ">
+              Dział szkód
+            </li>
+            <li data-info="#assistance" class="damages-a__tab js-tab ">
+              Pomoc assistance
+            </li>
+            <li data-info="#printings" class="damages-a__tab js-tab ">
+              Druki aktywne
+            </li>
+          </ul>
+          <!-- Panels -->
+          <div class="damages-a__panel js-active js-panel" id="about">
+            <h2 class="damages-a__panel-title">O firmie</h2>
+            <div
+              class="damages-a__panel-content damages-a__panel-content--about"
+            >
+              <div
+                class="damages-a__panel-content-text damages-a__panel-content-text--about"
+              >
+                <p class="damages-a__panel-content-text-item">
+                  Naszą główną działalnością są naprawy powypadkowe.
+                </p>
+                <p class="damages-a__panel-content-text-item">
+                  Serwis blacharsko-lakierniczy wsparty nowoczesną technologią
+                  oraz doświadczoną kadrą czuwa nad właściwym przebiegiem
+                  procesu naprawy pojazdu.
+                </p>
+                <p class="damages-a__panel-content-text-item">
+                  W uznaniu za wysoki standard świadczonych usług posiadamy
+                  autoryzację
+                  <span class="emphasise">Sieci Naprawczej PZU</span> oraz
+                  <span class="emphasise">Certyfikację I Segmentu</span>
+                  zakładów niezależnych.
+                </p>
+                <p class="damages-a__panel-content-text-item">
+                  Świadczymy usługi bezgotówkowe ze wszystkimi firmami
+                  ubezpieczeniowymi.
+                </p>
+                <p class="damages-a__panel-content-text-item">
+                  Na czas naprawy nasi klienci otrzymują samochody zastępcze.
+                </p>
+              </div>
+              <div
+                class="damages-a__panel-content-images damages-a__panel-content-images--about"
+              >
+                <img
+                  src="./img/pzu_logo.png"
+                  class="damages-a__panel-content-images-item damages-a__panel-content-images-item--about"
+                  alt="Logo PZU"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="damages-a__panel js-panel" id="damagesDepartment">
+            <h2 class="damages-a__panel-title">Dział szkód</h2>
+            <div
+              class="damages-a__panel-content damages-a__panel-content--damages"
+            >
+              <div class="damages-a__panel-content-text">
+                <p class="damages-a__panel-content-text-item">
+                  <span class="emphasise">Dział blacharni</span> wyposażony jest
+                  w szereg nowoczesnych urządzeń pozwalających wykonać naprawę
+                  zgodnie z technologią producenta.
+                </p>
+                <p class="damages-a__panel-content-text-item">
+                  Zachowanie kryteriów technologicznych w procesie odbudowy
+                  pojazdów powypadkowych bez użycia ram naprawczych, systemów
+                  pomiarowych oraz urządzeń do łączenia blach w technologii
+                  lutospawania <strong>(CUSi)</strong> czy zgrzewania jest
+                  obecnie niemożliwe.<br /><br />
+                  Stosowane przez nas ramy naprawcze firmy
+                  <strong>Car-O-Liner</strong> oraz system pomiarowy
+                  <strong>Car-O-Tronic</strong> zapewniają poprawność bryły
+                  karoserii.
+                </p>
+                <p class="damages-a__panel-content-text-item">
+                  Szeroka gama urządzeń pomocniczych firm
+                  <strong>Blackhawk, Metabo, Makita</strong> w połączeniu z
+                  wiedzą praktyczną i teoretyczną sprawia iż cały proces naprawy
+                  przebiega bezproblemowo.
+                </p>
+                <p class="damages-a__panel-content-text-item">
+                  <span class="emphasise">Dział lakierni</span> wyposażony jest
+                  w 6 stanowisk przygotowawczych z centralnym odciągiem pyłów
+                  oraz promienniki podczerwieni firmy Trisk.
+                </p>
+                <p class="damages-a__panel-content-text-item">
+                  Praca lakierni wsparta jest własnym magazynem produktów
+                  lakierniczych oraz trzema systemami mieszalni lakierów firmy
+                  <strong>R-M (onyx), R-M (diamont)</strong> oraz
+                  <strong>Ivat Coating</strong>. Procesy lakiernicze wykonywane
+                  są w komorze lakierniczej firmy <strong>Blowtherm</strong>.
+                </p>
+                <p class="damages-a__panel-content-text-item">
+                  Personel lakierniczy oraz osoby odpowiedzialne za dobór
+                  kolorów uczestniczą systematycznie w szkoleniach
+                  organizowanych przez naszych partnerów handlowych. Głównym
+                  opiekunem w tych kwestiach jest <strong>Grupa CSV</strong>.
+                </p>
+              </div>
+              <div
+                class="damages-a__panel-content-images damages-a__panel-content-images--damages"
+              >
+                <img
+                  src="./img/szkody/szkoda1.jpg"
+                  class="damages-a__panel-content-images-item damages-a__panel-content-images-item--damages"
+                  alt="Zdjęcie szkody"
+                />
+                <img
+                  src="./img/szkody/szkoda2.jpg"
+                  class="damages-a__panel-content-images-item damages-a__panel-content-images-item--damages"
+                  alt="Zdjęcie szkody"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="damages-a__panel js-panel" id="assistance">
+            <h2 class="damages-a__panel-title">Pomoc assistance</h2>
+            <div
+              class="damages-a__panel-content damages-a__panel-content--assistance"
+            >
+              <div class="damages-a__panel-content-text">
+                <p class="damages-a__panel-content-text-item">
+                  W przypadku awarii samochodu lub innego zdarzenia oferujemy
+                  całodobowo pomoc w zakresie holowania samochodów do 3,5 t. jak
+                  również powyżej 3,5 t.
+                </p>
+                <p class="damages-a__panel-content-text-item">
+                  Istnieje możliwość dostarczenia pojazdu zastępczego w miejsce
+                  zdarzenia celem kontynuowania dalszej podróży.
+                </p>
+                <p class="damages-a__panel-content-text-item">
+                  Kładąc szczególny nacisk na kompleksowość obsługi oraz
+                  oczekiwania klientów posiadamy własną wypożyczalnię
+                  samochodów. Do dyspozycji są pojazdy osobowe, terenowe jak
+                  również wyposażone w skrzynie automatyczne.
+                </p>
+                <p class="damages-a__panel-content-text-item">
+                  <span class="emphasise">Całodobowy telefon assistance: </span>
+                  <strong>605 899 595</strong>
+                </p>
+              </div>
+              <div
+                class="damages-a__panel-content-images damages-a__panel-content-images--assistance"
+              >
+                <img
+                  src="./img/assistance.jpg"
+                  class="damages-a__panel-content-images-item damages-a__panel-content-images-item--assistance"
+                  alt="Assistance photo"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="damages-a__panel js-panel" id="printings">
+            <h2 class="damages-a__panel-title">Druki aktywne</h2>
+            <div
+              class="damages-a__panel-content damages-a__panel-content--printings"
+            >
+              <ul class="damages-a__panel-content-list">
+                <li class="damages-a__panel-content-list-item">
+                  <a
+                    class="damages-a__panel-content-list-link"
+                    href="http://pabian.pl/wspolne_oswiadczenie_pl.pdf"
+                    target="_blank"
+                    >Oświadczenie o zdarzeniu drogowym</a
+                  >
+                </li>
+                <li class="damages-a__panel-content-list-item">
+                  <a
+                    class="damages-a__panel-content-list-link"
+                    href="http://pabian.pl/upowaznienie.pdf"
+                    target="_blank"
+                    >Upoważnienie</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer__content container">
+        <p class="footer__content-copyright">
+          Jan Pabian &copy; 2020. Wszelkie prawa zastrzeżone.
+        </p>
+        <div class="footer__content-socials">
+          <i class="footer__content-socials-icon fab fa-facebook"></i>
+          <i class="footer__content-socials-icon fab fa-instagram"></i>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const tabs = document.querySelector('.js-tabs');
+      const singleTabs = document.querySelectorAll('.js-tab');
+      const panels = document.querySelectorAll('.js-panel');
+
+      tabs.addEventListener('click', e => {
+        if (e.target.tagName === 'LI') {
+          const targetPanel = document.querySelector(e.target.dataset.info);
+          panels.forEach(panel => {
+            if (panel === targetPanel) {
+              // DO ZOPTYMALIZAOWANIA
+              panel.classList.add('js-active');
+              singleTabs.forEach(tab => tab.classList.remove('js-active'));
+              document
+                .querySelector(`[data-info="${e.target.dataset.info}"]`)
+                .classList.add('js-active');
+            } else {
+              panel.classList.remove('js-active');
+            }
+          });
+        }
+      });
+    </script>
+    <script>
+      const hamburgerIcon = document.getElementById('hamburger-icon');
+      const hamburgerBackdrop = document.getElementById('hamburger-backdrop');
+      const hamburgerMenu = document.getElementById('hamburger-menu');
+
+      hamburgerIcon.addEventListener('click', () => {
+        hamburgerIcon.classList.toggle('js-active');
+        hamburgerBackdrop.classList.toggle('js-active');
+        hamburgerMenu.classList.toggle('js-active');
+      });
+
+      hamburgerBackdrop.addEventListener('click', () => {
+        hamburgerIcon.classList.remove('js-active');
+        hamburgerBackdrop.classList.remove('js-active');
+        hamburgerMenu.classList.remove('js-active');
+      });
+    </script>
+  </body>
+</html>
