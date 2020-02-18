@@ -1,0 +1,185 @@
+// Gallery styles
+.gallery {
+    // Backdrop which works with big gallery
+    &__backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        background: rgba(0,0,0,0.8);
+        transform: translateY(100%);
+        transition: transform .5s;
+        cursor: pointer;
+
+        &.js-active {
+            transform: translateY(0);
+        }
+    }
+
+    // Gallery with single enlarged photo
+    &__big {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -450%);
+        z-index: 2;
+        transition: transform .5s;
+
+        &.js-active {
+            transform: translate(-50%, -50%);
+        }
+
+        &-controls {
+            font-size: 5rem;
+            color: $main-color;
+            
+            &-previous,
+            &-next {
+                position: absolute;
+                top: 50%;
+                transition: color .3s; 
+
+                &:hover {
+                    color: $light-color;
+                }
+            }
+
+            &-close {
+                position: fixed;
+                top: 0%;
+                right: 0%;
+                transform: translate(100%, -20%);
+                padding: 1rem;
+                transition: transform .3s, color .3s;
+                z-index: 5;
+
+                &:hover {
+                    color: $light-color;
+                    transform: translate(100%, -20%) scale(1.1);
+                }
+            }
+
+            &-previous {
+                left: 0;
+                transform: translate(-120%, -50%);
+                transition: transform .3s;
+                
+                &:hover {
+                    transform: translate(-130%, -50%);
+                }
+            }
+            
+            &-next {
+                right: 0;
+                transform: translate(120%, -50%);
+                transition: transform .3s;
+
+                &:hover {
+                    transform: translate(130%, -50);
+                }
+            }
+        }
+    }
+
+    // Gallery with small photos
+    &__photos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+
+        &-item {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+
+            &:hover {
+                .gallery__photos-item-cover-enlarge {
+                    background-color: rgba(255,255,255,0.2);
+                }
+
+                .gallery__photos-item-cover-enlarge-icon {
+                    visibility: visible;
+                }
+            }
+
+            &-cover {
+                position: relative;
+                
+                &-enlarge {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    background: rgba(255,255,255,0);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    transition: background .3s;
+
+                    &-icon {
+                        visibility: hidden;
+                        color: $medium-color;
+                        transition: color .3s;
+
+                        &:hover {
+                            color: #000;
+                        }
+                    }
+                }
+            }
+
+            &-info {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background: rgba(255, 188, 0, 0.3);
+                padding: 2rem;
+                cursor: help;
+
+                clip-path: polygon(80% 10%, 90% 10%, 90% 20%, 80% 20%);
+                transition: background .5s ease-in-out, clip-path .5s ease-in-out;
+
+                 &:hover {
+                    background: $main-color;
+                    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+                    .gallery__photos-item-info-icon {
+                        color: $main-color;
+                    }
+                }
+
+                &-icon {
+                    position: absolute;
+                    left: 84%;
+                    top: 12%;
+                    font-weight: bold;
+                    color: #FFF;                    
+                    transition: color .5s;
+                }
+
+                &-title {
+                    margin-bottom: 1.5rem;
+                }
+
+                &-text {
+                    line-height: 2;
+                }
+            }
+        }
+    }
+}
+
+
+

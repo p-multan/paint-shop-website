@@ -1,0 +1,29 @@
+// Supply sections
+.supply {
+  &-a {
+    &__background {
+      background: url(./img/bg/bg_lakiery.jpg) no-repeat center 40% / cover;
+    }
+
+    &__products {
+      padding: 2rem 3rem;
+      display: flex;
+      justify-content: space-around;
+      background: rgba(255, 255, 255, 0.8);
+
+      &-list {
+        list-style-image: url(http://pabian.pl/images/tick.png);
+        width: 28%;
+        text-align: left;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  &-b {
+    background: $bg-parallax-supply no-repeat 10% 35% / cover;
+    min-height: 50vh;
+    margin: 4rem 0;
+    background-attachment: fixed;
+  }
+}

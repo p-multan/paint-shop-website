@@ -4,7 +4,7 @@ export class Tabs {
     this.singleTabs = document.querySelectorAll('.js-tab');
     this.panels = document.querySelectorAll('.js-panel');
 
-    this.tabs.addEventListener('click', this.changeTabsHandler);
+    this.tabs.addEventListener('click', this.changeTabsHandler.bind(this));
   }
 
   changeTabsHandler(e) {

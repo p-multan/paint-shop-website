@@ -1,5 +1,11 @@
 import { Hamburger } from './js/hamburger';
 
-document.addEventListener('DOMContentLoaded', () => {
-  const hamburger = new Hamburger();
-});
+class Basic {
+  static init() {
+    document.addEventListener('DOMContentLoaded', () => {
+      const hamburger = new Hamburger();
+    });
+  }
+}
+
+Basic.init();

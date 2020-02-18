@@ -4,10 +4,13 @@ export class Hamburger {
     this.hamburgerBackdrop = document.getElementById('hamburger-backdrop');
     this.hamburgerMenu = document.getElementById('hamburger-menu');
 
-    this.hamburgerIcon.addEventListener('click', this.menuVisibilityHandler);
+    this.hamburgerIcon.addEventListener(
+      'click',
+      this.menuVisibilityHandler.bind(this)
+    );
     this.hamburgerBackdrop.addEventListener(
       'click',
-      this.menuVisibilityHandler
+      this.menuVisibilityHandler.bind(this)
     );
   }
 

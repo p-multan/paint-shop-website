@@ -4,7 +4,12 @@ const webpack = require('webpack');
 
 module.exports = {
   mode: 'development',
-  entry: {},
+  entry: {
+    basic: './src/basic.js',
+    contact: './src/contact.js',
+    damages: './src/damages.js',
+    style: './src/main.scss'
+  },
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'dist')
@@ -23,7 +28,73 @@ module.exports = {
     open: true,
     inline: true
   },
-  plugins: [],
+  plugins: [
+    new HtmlWebpackPlugin({
+      chunks: ['basic', 'style'],
+      template: path.resolve(__dirname, 'src', 'index.html'),
+      filename: path.resolve(__dirname, 'dist', 'index.html'),
+      minify: {
+        collapseWhitespace: true
+      }
+    }),
+    new HtmlWebpackPlugin({
+      chunks: ['basic', 'style'],
+      template: path.resolve(__dirname, 'src', 'carPainting.html'),
+      filename: path.resolve(__dirname, 'dist', 'carPainting.html'),
+      minify: {
+        collapseWhitespace: true
+      }
+    }),
+    new HtmlWebpackPlugin({
+      chunks: ['basic', 'style'],
+      template: path.resolve(__dirname, 'src', 'carRental.html'),
+      filename: path.resolve(__dirname, 'dist', 'carRental.html'),
+      minify: {
+        collapseWhitespace: true
+      }
+    }),
+    new HtmlWebpackPlugin({
+      chunks: ['basic', 'style'],
+      template: path.resolve(__dirname, 'src', 'about.html'),
+      filename: path.resolve(__dirname, 'dist', 'about.html'),
+      minify: {
+        collapseWhitespace: true
+      }
+    }),
+    new HtmlWebpackPlugin({
+      chunks: ['basic', 'style'],
+      template: path.resolve(__dirname, 'src', 'gallery.html'),
+      filename: path.resolve(__dirname, 'dist', 'gallery.html'),
+      minify: {
+        collapseWhitespace: true
+      }
+    }),
+    new HtmlWebpackPlugin({
+      chunks: ['basic', 'style'],
+      template: path.resolve(__dirname, 'src', 'supply.html'),
+      filename: path.resolve(__dirname, 'dist', 'supply.html'),
+      minify: {
+        collapseWhitespace: true
+      }
+    }),
+    new HtmlWebpackPlugin({
+      chunks: ['damages', 'style'],
+      template: path.resolve(__dirname, 'src', 'damages.html'),
+      filename: path.resolve(__dirname, 'dist', 'damages.html'),
+      minify: {
+        collapseWhitespace: true
+      }
+    }),
+    new HtmlWebpackPlugin({
+      chunks: ['contact', 'style'],
+      template: path.resolve(__dirname, 'src', 'contact.html'),
+      filename: path.resolve(__dirname, 'dist', 'contact.html'),
+      minify: {
+        collapseWhitespace: true
+      }
+    }),
+    new webpack.HotModuleReplacementPlugin()
+  ],
   module: {
     rules: [
       {
