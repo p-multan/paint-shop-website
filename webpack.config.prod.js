@@ -12,6 +12,7 @@ module.exports = {
     basic: './src/basic.js',
     contact: './src/contact.js',
     damages: './src/damages.js',
+    index: './src/index.js',
     style: './src/main.scss'
   },
   output: {
@@ -23,7 +24,7 @@ module.exports = {
     new MiniCssExtractPlugin(),
     new FixStyleOnlyEntriesPlugin(),
     new HtmlWebpackPlugin({
-      chunks: ['basic', 'style'],
+      chunks: ['index', 'style'],
       template: path.resolve(__dirname, 'src', 'index.html'),
       filename: path.resolve(__dirname, 'dist', 'index.html'),
       minify: {

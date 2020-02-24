@@ -1,25 +1,30 @@
 // Footer
 .footer {
-  // display: flex;
-  // align-items: center;
   background-color: $dark-color;
   color: #fff;
-  height: 10vh;
+  height: 30vh;
+  padding: 2rem 0;
 
   .container {
     height: 100%;
+    width: 80%;
   }
 
   &__content {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
     height: 100%;
-    font-size: 1.2rem;
+    font-size: 2rem;
+
+    &-copyright {
+      text-align: center;
+    }
 
     &-socials {
       &-icon {
-        font-size: 1.5rem;
+        font-size: 3rem;
         margin-right: 1rem;
         cursor: pointer;
         transition: transform 0.5s;

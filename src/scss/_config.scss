@@ -1,13 +1,3 @@
-// Variables
-$website-width: 1280px;
-$main-color: #fac621;
-$light-color: #f4f4f4;
-$medium-color: #ccc;
-$dark-color: #333;
-$bg-image: url('./img/showcase2.jpg');
-$bg-parallax-home: url('./img/parallax.jpg');
-$bg-parallax-supply: url('./img/supply_parallax.jpg');
-
 // Set text color
 @function set-text-color($color) {
   @if (lightness($color) > 50) {

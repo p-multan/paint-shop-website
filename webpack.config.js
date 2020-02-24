@@ -8,6 +8,8 @@ module.exports = {
     basic: './src/basic.js',
     contact: './src/contact.js',
     damages: './src/damages.js',
+    index: './src/index.js',
+    gallery: './src/gallery.js',
     style: './src/main.scss'
   },
   output: {
@@ -30,7 +32,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      chunks: ['basic', 'style'],
+      chunks: ['index', 'style'],
       template: path.resolve(__dirname, 'src', 'index.html'),
       filename: path.resolve(__dirname, 'dist', 'index.html'),
       minify: {
@@ -62,7 +64,7 @@ module.exports = {
       }
     }),
     new HtmlWebpackPlugin({
-      chunks: ['basic', 'style'],
+      chunks: ['gallery', 'style'],
       template: path.resolve(__dirname, 'src', 'gallery.html'),
       filename: path.resolve(__dirname, 'dist', 'gallery.html'),
       minify: {

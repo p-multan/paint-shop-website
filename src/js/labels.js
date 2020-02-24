@@ -16,8 +16,12 @@ export class Labels {
 
   handleInputsOnBlur() {
     this.inputs.forEach(input => {
-      input.addEventListener('focus', e => {
-        e.target.previousElementSibling.classList.add('js-focus');
+      input.addEventListener('blur', e => {
+        if (e.target.value === '') {
+          e.target.previousElementSibling.classList.remove('js-focus');
+        } else {
+          return;
+        }
       });
     });
   }

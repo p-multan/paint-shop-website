@@ -1,4 +1,7 @@
+@import './scss/normalize';
+@import './scss/variables';
 @import './scss/config';
+@import './scss/mixins';
 @import './scss/generalStyles';
 @import './scss/utilities';
 @import './scss/header';
@@ -9,4 +12,4 @@
 @import './scss/supplySections';
 @import './scss/damagesSections';
 @import './scss/footer';
-@import './scss/mediaQueries';
+// @import './scss/mediaQueries';

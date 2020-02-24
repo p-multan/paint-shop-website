@@ -1,13 +1,13 @@
 import { Hamburger } from './js/hamburger';
-import { Tabs } from './js/tabs';
+import { Gallery } from './js/gallery';
 
-class Damages {
+class Basic {
   static init() {
     document.addEventListener('DOMContentLoaded', () => {
       new Hamburger();
-      new Tabs();
+      new Gallery();
     });
   }
 }
 
-Damages.init();
+Basic.init();

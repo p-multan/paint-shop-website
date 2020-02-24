@@ -1,0 +1,30 @@
+// Variables
+$website-width: 1280px;
+$main-color: #fac621;
+$light-color: #f4f4f4;
+$medium-color: #ccc;
+$dark-color: #333;
+$bg-image: url('./img/showcase2.jpg');
+$bg-parallax-home: url('./img/parallax.jpg');
+$bg-parallax-supply: url('./img/supply_parallax.jpg');
+
+$breakpoints: (
+  small: (
+    min-width: 460px
+  ),
+  medium: (
+    min-width: 770px
+  ),
+  large: (
+    min-width: 1050px
+  ),
+  xlarge: (
+    min-width: 1200px
+  ),
+  xxlarge: (
+    min-width: 1450px
+  ),
+  giga: (
+    min-width: 2000px
+  )
+);

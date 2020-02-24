@@ -11,7 +11,7 @@
       crossorigin="anonymous"
     />
     <link
-      href="https://fonts.googleapis.com/css?family=Lato&display=swap"
+      href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap&subset=latin-ext"
       rel="stylesheet"
     />
   </head>
@@ -105,12 +105,17 @@
               data-words='["Zaopatrzenie lakierni", "Obsługa szkód komunikacyjnych", "Wynajem samochodów"]'
             ></span>
           </h1>
-          <p class="header__content-info text-lead">
-            Najwyższej jakości usługi od 1992 roku - zaufaj doświadczeniu
-          </p>
-          <a href="about.html" class="header__content-button btn btn--light"
-            >Dowiedz się więcej</a
-          >
+
+          <div class="header__content-info">
+            <p class="header__content-info-text">
+              Najwyższej jakości usługi od 1992 roku - zaufaj doświadczeniu
+            </p>
+            <a
+              href="about.html"
+              class="header__content-info-button btn btn--light"
+              >Dowiedz się więcej</a
+            >
+          </div>
         </div>
         <div class="header__scroll">
           <a data-scroll href="#sectionScroll" class="header__scroll-arrows">
@@ -146,7 +151,7 @@
                   <i
                     class="home-a__card-front-content-icon fas fa-palette fa-4x"
                   ></i>
-                  <h3>
+                  <h3 class="home-a__card-front-content-text">
                     Kompleksowe<br />
                     Zaopatrzenie<br />
                     Lakierni
@@ -178,7 +183,7 @@
                   <i
                     class="home-a__card-front-content-icon fas fa-car-crash fa-4x"
                   ></i>
-                  <h3>
+                  <h3 class="home-a__card-front-content-text">
                     Centrum obsługi<br />
                     szkód<br />
                     komunikacyjnych
@@ -211,7 +216,7 @@
                   <i
                     class="home-a__card-front-content-icon fas fa-car-side fa-4x"
                   ></i>
-                  <h3>
+                  <h3 class="home-a__card-front-content-text">
                     Wynajem<br />
                     Samochodów
                   </h3>
@@ -241,7 +246,9 @@
                   <i
                     class="home-a__card-front-content-icon fas fa-spray-can fa-4x"
                   ></i>
-                  <h3>Lakiernictwo Samochodowe</h3>
+                  <h3 class="home-a__card-front-content-text">
+                    Lakiernictwo Samochodowe
+                  </h3>
                 </div>
               </div>
 
@@ -363,7 +370,7 @@
     <footer class="footer">
       <div class="footer__content container">
         <p class="footer__content-copyright">
-          Jan Pabian &copy; 2020. Wszelkie prawa zastrzeżone.
+          Jan Pabian &copy; 2020.
         </p>
         <div class="footer__content-socials">
           <i class="footer__content-socials-icon fab fa-facebook"></i>

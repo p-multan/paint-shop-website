@@ -1,81 +1,104 @@
-const photos = document.querySelectorAll('.js-photo');
-const extendPhotos = document.querySelectorAll('.js-enlarge');
-const extendIcons = document.querySelectorAll('.js-enlarge-icon');
-const backdrop = document.querySelector('.js-backdrop');
-const centerPhoto = document.querySelector('.js-gallery-big');
-const activePhoto = document.querySelector('.js-gallery-big-photo');
-const controls = document.querySelectorAll('.js-control');
-const photosNumber = photos.length;
+export class Gallery {
+  constructor() {
+    this.photos = document.querySelectorAll('.js-photo');
+    this.extendPhotos = document.querySelectorAll('.js-enlarge');
+    this.extendIcons = document.querySelectorAll('.js-enlarge-icon');
+    this.backdrop = document.getElementById('galleryBackdrop');
+    this.centerPhoto = document.getElementById('galleryBig');
+    this.activePhoto = document.getElementById('galleryBigPhoto');
+    this.controls = document.querySelectorAll('.js-control');
+    this.photosNumber = this.photos.length;
 
-backdrop.addEventListener('click', () => {
-  backdrop.classList.remove('js-active');
-  centerPhoto.classList.remove('js-active');
-});
-
-extendPhotos.forEach(extendPhoto => {
-  extendPhoto.addEventListener('click', e => {
-    const src = e.target.previousElementSibling.getAttribute('src');
-    backdrop.classList.add('js-active');
-
-    activePhoto.setAttribute('src', src);
-    centerPhoto.classList.add('js-active');
-  });
-});
-
-extendIcons.forEach(extendIcon => {
-  extendIcon.addEventListener('click', e => {
-    const src = e.target.parentElement.previousElementSibling.getAttribute(
-      'src'
+    this.backdrop.addEventListener(
+      'click',
+      this.backdropClickHandler.bind(this)
     );
-    backdrop.classList.add('js-active');
 
-    activePhoto.setAttribute('src', src);
-    centerPhoto.classList.add('js-active');
-  });
-});
-
-controls.forEach(control => {
-  control.addEventListener('click', e => {
-    if (e.target.classList.contains('js-previous')) {
-      const numberPattern = /\d+/g;
-      const currentSrc = activePhoto.getAttribute('src');
-      const currentNumber = +currentSrc.match(numberPattern)[0];
-      const newNumber =
-        currentNumber - 1 > 0 ? currentNumber - 1 : photosNumber;
-      const newSrc = currentSrc.replace(currentNumber, newNumber);
-      activePhoto.setAttribute('src', newSrc);
-    } else if (e.target.classList.contains('js-next')) {
-      const numberPattern = /\d+/g;
-      const currentSrc = activePhoto.getAttribute('src');
-      const currentNumber = +currentSrc.match(numberPattern)[0];
-      const newNumber =
-        currentNumber + 1 > photosNumber ? 1 : currentNumber + 1;
-      const newSrc = currentSrc.replace(currentNumber, newNumber);
-      activePhoto.setAttribute('src', newSrc);
-    } else if (e.target.classList.contains('js-close')) {
-      backdrop.classList.remove('js-active');
-      centerPhoto.classList.remove('js-active');
-    }
-  });
-});
-
-document.addEventListener('keyup', e => {
-  if (e.keyCode === 37) {
-    const numberPattern = /\d+/g;
-    const currentSrc = activePhoto.getAttribute('src');
-    const currentNumber = +currentSrc.match(numberPattern)[0];
-    const newNumber = currentNumber - 1 > 0 ? currentNumber - 1 : photosNumber;
-    const newSrc = currentSrc.replace(currentNumber, newNumber);
-    activePhoto.setAttribute('src', newSrc);
-  } else if (e.keyCode === 39) {
-    const numberPattern = /\d+/g;
-    const currentSrc = activePhoto.getAttribute('src');
-    const currentNumber = +currentSrc.match(numberPattern)[0];
-    const newNumber = currentNumber + 1 > photosNumber ? 1 : currentNumber + 1;
-    const newSrc = currentSrc.replace(currentNumber, newNumber);
-    activePhoto.setAttribute('src', newSrc);
-  } else if (e.keyCode === 27) {
-    backdrop.classList.remove('js-active');
-    centerPhoto.classList.remove('js-active');
+    this.extendPhotosHandler();
+    this.extendIconsHandler();
+    this.controlsHandler();
+    document.addEventListener('keyup', this.keyHandler.bind(this));
   }
-});
+
+  backdropClickHandler() {
+    this.backdrop.classList.remove('js-active');
+    this.centerPhoto.classList.remove('js-active');
+  }
+
+  extendPhotosHandler() {
+    this.extendPhotos.forEach(extendPhoto => {
+      extendPhoto.addEventListener('click', e => {
+        const src = e.target
+          .closest('.gallery__photos-item-cover-enlarge')
+          .previousElementSibling.getAttribute('src');
+        this.backdrop.classList.add('js-active');
+
+        this.activePhoto.setAttribute('src', src);
+        this.centerPhoto.classList.add('js-active');
+      });
+    });
+  }
+
+  extendIconsHandler() {
+    this.extendIcons.forEach(extendIcon => {
+      extendIcon.addEventListener('click', e => {
+        const src = e.target.parentElement.previousElementSibling.getAttribute(
+          'src'
+        );
+        this.backdrop.classList.add('js-active');
+
+        this.activePhoto.setAttribute('src', src);
+        this.centerPhoto.classList.add('js-active');
+      });
+    });
+  }
+
+  controlsHandler() {
+    this.controls.forEach(control => {
+      control.addEventListener('click', e => {
+        if (e.target.classList.contains('js-previous')) {
+          const numberPattern = /\d+/g;
+          const currentSrc = this.activePhoto.getAttribute('src');
+          const currentNumber = +currentSrc.match(numberPattern)[0];
+          const newNumber =
+            currentNumber - 1 > 0 ? currentNumber - 1 : this.photosNumber;
+          const newSrc = currentSrc.replace(currentNumber, newNumber);
+          this.activePhoto.setAttribute('src', newSrc);
+        } else if (e.target.classList.contains('js-next')) {
+          const numberPattern = /\d+/g;
+          const currentSrc = this.activePhoto.getAttribute('src');
+          const currentNumber = +currentSrc.match(numberPattern)[0];
+          const newNumber =
+            currentNumber + 1 > this.photosNumber ? 1 : currentNumber + 1;
+          const newSrc = currentSrc.replace(currentNumber, newNumber);
+          this.activePhoto.setAttribute('src', newSrc);
+        } else if (e.target.classList.contains('js-close')) {
+          this.backdrop.classList.remove('js-active');
+          this.centerPhoto.classList.remove('js-active');
+        }
+      });
+    });
+  }
+
+  keyHandler(e) {
+    if (e.keyCode === 37) {
+      const numberPattern = /\d+/g;
+      const currentSrc = this.activePhoto.getAttribute('src');
+      const currentNumber = +currentSrc.match(numberPattern)[0];
+      const newNumber =
+        currentNumber - 1 > 0 ? currentNumber - 1 : this.photosNumber;
+      const newSrc = currentSrc.replace(currentNumber, newNumber);
+      this.activePhoto.setAttribute('src', newSrc);
+    } else if (e.keyCode === 39) {
+      const numberPattern = /\d+/g;
+      const currentSrc = this.activePhoto.getAttribute('src');
+      const currentNumber = +currentSrc.match(numberPattern)[0];
+      const newNumber =
+        currentNumber + 1 > this.photosNumber ? 1 : currentNumber + 1;
+      const newSrc = currentSrc.replace(currentNumber, newNumber);
+      this.activePhoto.setAttribute('src', newSrc);
+    } else if (e.keyCode === 27) {
+      this.backdropClickHandler();
+    }
+  }
+}
