@@ -6,15 +6,16 @@
       margin: 3rem auto 2rem;
       display: grid;
       width: 100%;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      row-gap: 3rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      row-gap: 2rem;
+      column-gap: 1rem;
       justify-items: center;
     }
 
     &__special {
       @include position(relative);
-      width: 260px;
-      height: 260px;
+      width: 280px;
+      height: 280px;
     }
 
     &__card {

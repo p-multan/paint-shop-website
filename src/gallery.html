@@ -19,87 +19,64 @@
     <!-- Header -->
     <header class="header header--inner">
       <div class="header__backdrop">
-        <div class="container">
-          <nav class="header__nav">
-            <div class="header__nav-logo">
-              <a href="index.html"
-                ><img
-                  src="img/logo.png"
-                  alt="Logo zakładu"
-                  class="header__nav-logo-image"
-              /></a>
-            </div>
-            <ul class="header__nav-items">
-              <li class="header__nav-item">
-                <a href="index.html" class="header__nav-item-link"
+        <div class="header__hamburger" id="header-hamburger">
+          <span
+            class="header__hamburger-bar header__hamburger-bar--first"
+          ></span>
+          <span
+            class="header__hamburger-bar header__hamburger-bar--second"
+          ></span>
+          <span
+            class="header__hamburger-bar header__hamburger-bar--third"
+          ></span>
+        </div>
+
+        <nav class="header__nav">
+          <a href="./index.html" class="header__nav-logo">
+            <img
+              src="img/logo.png"
+              alt="Logo zakładu"
+              class="header__nav-logo-image"
+            />
+          </a>
+
+          <div class="header__nav-overlay" id="header-overlay">
+            <ul class="header__nav-menu">
+              <li class="header__nav-menu-item">
+                <a href="./index.html" class="header__nav-menu-link"
                   >Strona Główna</a
                 >
               </li>
-              <li class="header__nav-item">
-                <a href="about.html" class="header__nav-item-link">O nas</a>
+
+              <li class="header__nav-menu-item">
+                <a href="./about.html" class="header__nav-menu-link">O nas</a>
               </li>
-              <li class="header__nav-item">
+
+              <li class="header__nav-menu-item header__nav-menu-item--logo">
+                <a href="index.html" class="header__nav-menu-link--logo"
+                  ><img
+                    src="./img/logo.png"
+                    alt="Logo zakładu"
+                    class="header__nav-menu-link-logo"
+                /></a>
+              </li>
+
+              <li class="header__nav-menu-item">
                 <a
-                  href="gallery.html"
-                  class="header__nav-item-link  header__nav-item-link--active"
+                  href="./gallery.html"
+                  class="header__nav-menu-link  header__nav-menu-link--active"
                   >Galeria</a
                 >
               </li>
-              <li class="header__nav-item">
-                <a href="contact.html" class="header__nav-item-link">Kontakt</a>
+
+              <li class="header__nav-menu-item">
+                <a href="./contact.html" class="header__nav-menu-link"
+                  >Kontakt</a
+                >
               </li>
             </ul>
-            <div class="header__nav-hamburger">
-              <div class="header__nav-hamburger-icon" id="hamburger-icon">
-                <span
-                  class="header__nav-hamburger-icon-line header__nav-hamburger-icon-line--first"
-                ></span>
-                <span
-                  class="header__nav-hamburger-icon-line header__nav-hamburger-icon-line--second"
-                ></span>
-                <span
-                  class="header__nav-hamburger-icon-line header__nav-hamburger-icon-line--third"
-                ></span>
-              </div>
-              <div
-                class="header__nav-hamburger-backdrop"
-                id="hamburger-backdrop"
-              ></div>
-              <div class="header__nav-hamburger-menu" id="hamburger-menu">
-                <ul class="header__nav-hamburger-menu-items">
-                  <li class="header__nav-hamburger-menu-item">
-                    <a
-                      href="index.html"
-                      class="header__nav-hamburger-menu-item-link"
-                      >Strona Główna</a
-                    >
-                  </li>
-                  <li class="header__nav-hamburger-menu-item">
-                    <a
-                      href="about.html"
-                      class="header__nav-hamburger-menu-item-link"
-                      >O nas</a
-                    >
-                  </li>
-                  <li class="header__nav-hamburger-menu-item">
-                    <a
-                      href="gallery.html"
-                      class="header__nav-hamburger-menu-item-link header__nav-hamburger-menu-item-link--active"
-                      >Galeria</a
-                    >
-                  </li>
-                  <li class="header__nav-hamburger-menu-item">
-                    <a
-                      href="contact.html"
-                      class="header__nav-hamburger-menu-item-link"
-                      >Kontakt</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-        </div>
+          </div>
+        </nav>
       </div>
     </header>
 

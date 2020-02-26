@@ -38,14 +38,15 @@
   &-b {
     &__testimonials {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
       row-gap: 3rem;
+      column-gap: 3rem;
       margin: 4rem 0;
       justify-items: center;
     }
 
     &__testimonial {
-      width: 260px;
+      width: 290px;
 
       &:nth-child(even) {
         .about-b__testimonial-text {

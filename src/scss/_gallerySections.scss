@@ -4,7 +4,7 @@
   // Backdrop which works with big gallery
   &__backdrop {
     @include position(fixed, 0, 0, 0, 0);
-    z-index: 1;
+    z-index: 3;
     background: rgba(0, 0, 0, 0.8);
     transform: translateY(100%);
     transition: transform 0.5s;
@@ -19,7 +19,7 @@
   &__big {
     @include position(fixed, 50%, null, null, 50%);
     transform: translate(-50%, -550%);
-    z-index: 2;
+    z-index: 4;
     transition: transform 0.5s;
 
     &.js-active {
@@ -46,6 +46,7 @@
       &-previous,
       &-next,
       &-close {
+        transform: scale(1);
         cursor: pointer;
         transition: color 0.3s, transform 0.3s;
 

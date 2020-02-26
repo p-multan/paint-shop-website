@@ -9,14 +9,17 @@ $bg-parallax-home: url('./img/parallax.jpg');
 $bg-parallax-supply: url('./img/supply_parallax.jpg');
 
 $breakpoints: (
+  xsmall: (
+    min-width: 400px
+  ),
   small: (
     min-width: 460px
   ),
   medium: (
-    min-width: 770px
+    min-width: 768px
   ),
   large: (
-    min-width: 1050px
+    min-width: 1024px
   ),
   xlarge: (
     min-width: 1200px
