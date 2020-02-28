@@ -144,6 +144,19 @@ module.exports = {
         ]
       },
       {
+        test: /\.pdf$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              outputPath: './pdf',
+              name: '[name].[ext]',
+              esModule: false
+            }
+          }
+        ]
+      },
+      {
         test: /\.html$/,
         use: [
           {
