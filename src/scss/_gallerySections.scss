@@ -127,6 +127,10 @@
           }
         }
 
+        &-content {
+          cursor: pointer;
+        }
+
         &-icon {
           @include position(absolute, 15%, null, null, 83%);
           font-size: 2rem;
