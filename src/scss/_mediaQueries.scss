@@ -262,6 +262,24 @@
     }
   }
 
+  .rental {
+    &__content {
+      font-size: 2.5rem;
+    }
+
+    &-text {
+      &--emphasise {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  .painting {
+    &__content {
+      font-size: 2.5rem;
+    }
+  }
+
   .footer {
     &__content {
       font-size: 2.5rem;
@@ -641,6 +659,24 @@
       &__tabs {
         grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       }
+    }
+  }
+
+  .rental {
+    &__content {
+      font-size: 2.8rem;
+    }
+
+    &-text {
+      &--emphasise {
+        font-size: 3.2rem;
+      }
+    }
+  }
+
+  .painting {
+    &__content {
+      font-size: 2.8rem;
     }
   }
 

@@ -1,0 +1,13 @@
+.painting {
+  &__content {
+    font-size: 2rem;
+
+    &-text {
+      margin-bottom: 2rem;
+    }
+
+    &-emphasise {
+      color: $main-color;
+    }
+  }
+}

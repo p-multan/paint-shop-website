@@ -104,6 +104,19 @@
         }
       }
     }
+
+    &__rodo {
+      margin-top: 2rem;
+      font-size: 2rem;
+
+      &-link {
+        transition: 0.3s;
+
+        &:hover {
+          color: $main-color;
+        }
+      }
+    }
   }
 
   // Section B - Contact infos
@@ -147,6 +160,7 @@
         align-items: center;
         min-height: 70px;
         &-text {
+          color: $light-color;
           font-size: 1.6rem;
         }
       }
