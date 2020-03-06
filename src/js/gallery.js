@@ -1,3 +1,5 @@
+import 'hammerjs';
+
 export class Gallery {
   constructor() {
     this.photos = document.querySelectorAll('.js-photo');
@@ -8,6 +10,7 @@ export class Gallery {
     this.activePhoto = document.getElementById('galleryBigPhoto');
     this.controls = document.querySelectorAll('.js-control');
     this.photosNumber = this.photos.length;
+    const hammer = new Hammer(this.centerPhoto);
 
     this.backdrop.addEventListener(
       'click',
@@ -18,6 +21,25 @@ export class Gallery {
     this.extendIconsHandler();
     this.controlsHandler();
     document.addEventListener('keyup', this.keyHandler.bind(this));
+    hammer.on('swipeleft', () => {
+      const numberPattern = /\d+/g;
+      const currentSrc = this.activePhoto.getAttribute('src');
+      const currentNumber = +currentSrc.match(numberPattern)[0];
+      const newNumber =
+        currentNumber + 1 > this.photosNumber ? 1 : currentNumber + 1;
+      const newSrc = currentSrc.replace(currentNumber, newNumber);
+      this.activePhoto.setAttribute('src', newSrc);
+    });
+
+    hammer.on('swiperight', () => {
+      const numberPattern = /\d+/g;
+      const currentSrc = this.activePhoto.getAttribute('src');
+      const currentNumber = +currentSrc.match(numberPattern)[0];
+      const newNumber =
+        currentNumber - 1 > 0 ? currentNumber - 1 : this.photosNumber;
+      const newSrc = currentSrc.replace(currentNumber, newNumber);
+      this.activePhoto.setAttribute('src', newSrc);
+    });
   }
 
   backdropClickHandler() {
