@@ -41,56 +41,64 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       chunks: ['basic', 'style'],
-      template: path.resolve(__dirname, 'src', 'carPainting.html'),
-      filename: path.resolve(__dirname, 'dist', 'carPainting.html'),
+      template: path.resolve(__dirname, 'src', 'lakiernictwo-samochodowe.html'),
+      filename: path.resolve(
+        __dirname,
+        'dist',
+        'lakiernictwo-samochodowe.html'
+      ),
       minify: {
         collapseWhitespace: true
       }
     }),
     new HtmlWebpackPlugin({
       chunks: ['basic', 'style'],
-      template: path.resolve(__dirname, 'src', 'carRental.html'),
-      filename: path.resolve(__dirname, 'dist', 'carRental.html'),
+      template: path.resolve(__dirname, 'src', 'wypozyczalnia-samochodow.html'),
+      filename: path.resolve(
+        __dirname,
+        'dist',
+        'wypozyczalnia-samochodow.html'
+      ),
       minify: {
         collapseWhitespace: true
       }
     }),
     new HtmlWebpackPlugin({
       chunks: ['basic', 'style'],
-      template: path.resolve(__dirname, 'src', 'about.html'),
-      filename: path.resolve(__dirname, 'dist', 'about.html'),
+      template: path.resolve(__dirname, 'src', 'o-nas.html'),
+      filename: path.resolve(__dirname, 'dist', 'o-nas.html'),
       minify: {
         collapseWhitespace: true
       }
     }),
     new HtmlWebpackPlugin({
       chunks: ['gallery', 'style'],
-      template: path.resolve(__dirname, 'src', 'gallery.html'),
-      filename: path.resolve(__dirname, 'dist', 'gallery.html'),
+      template: path.resolve(__dirname, 'src', 'galeria.html'),
+      filename: path.resolve(__dirname, 'dist', 'galeria.html'),
       minify: {
         collapseWhitespace: true
       }
     }),
     new HtmlWebpackPlugin({
       chunks: ['basic', 'style'],
-      template: path.resolve(__dirname, 'src', 'supply.html'),
-      filename: path.resolve(__dirname, 'dist', 'supply.html'),
+      template: path.resolve(__dirname, 'src', 'zaopatrzenie-lakierni.html'),
+      filename: path.resolve(__dirname, 'dist', 'zaopatrzenie-lakierni.html'),
       minify: {
         collapseWhitespace: true
       }
     }),
     new HtmlWebpackPlugin({
       chunks: ['damages', 'style'],
-      template: path.resolve(__dirname, 'src', 'damages.html'),
-      filename: path.resolve(__dirname, 'dist', 'damages.html'),
+      template: path.resolve(__dirname, 'src', 'szkody-komunikacyjne.html'),
+      filename: path.resolve(__dirname, 'dist', 'szkody-komunikacyjne.html'),
       minify: {
         collapseWhitespace: true
       }
     }),
     new HtmlWebpackPlugin({
       chunks: ['contact', 'style'],
-      template: path.resolve(__dirname, 'src', 'contact.html'),
-      filename: path.resolve(__dirname, 'dist', 'contact.html'),
+      template: path.resolve(__dirname, 'src', 'kontakt.html'),
+      filename: path.resolve(__dirname, 'dist', 'kontakt.html'),
       minify: {
         collapseWhitespace: true
       }
