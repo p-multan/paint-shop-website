@@ -12,28 +12,14 @@
 
   &__content {
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
     height: 100%;
     font-size: 2rem;
 
     &-copyright {
       text-align: center;
-    }
-
-    &-socials {
-      &-icon {
-        font-size: 3rem;
-        margin-right: 1rem;
-        cursor: pointer;
-        transition: transform 0.5s;
-
-        &:hover {
-          color: $main-color;
-          transform: scale(1.2);
-        }
-      }
     }
   }
 }
